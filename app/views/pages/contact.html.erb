@@ -1,0 +1,36 @@
+<h3> Contact </h3>
+
+<div class="card z-depth-3">
+  <div class="card-content">
+    <p>Do you want to talk? Maybe get a drink?</p>
+
+    </div>
+  </div>
+
+  <style>
+      #map {
+       height: 400px;
+       width: 100%;
+      }
+   </style>
+ </head>
+ <body>
+   <h3>My Google Maps Demo</h3>
+   <div id="map"></div>
+   <script>
+     function initMap() {
+       var uluru = {lat: 51.5033640, lng: -0.1276250};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 14,
+         center: uluru
+       });
+       var marker = new google.maps.Marker({
+         position: uluru,
+         title: "Here is where ever",
+         map: map
+       });
+     }
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=[APIkey goes here]&callback=initMap">
+   </script>
