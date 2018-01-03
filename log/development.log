@@ -608,3 +608,445 @@ Processing by VideosController#show as HTML
 Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:15:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 282ms (Views: 266.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2018-01-03 11:15:26 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (229.8ms)
+  Rendered videos/edit.html.erb within layouts/application (233.2ms)
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde9d1ddd40>
+Did you mean?  @video):
+    1: <%= form_for(video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+  
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70297005390160'
+app/views/videos/edit.html.erb:5:in `_app_views_videos_edit_html_erb__903562344319452465_70297047724960'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.0ms)
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:15:41 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:15:44 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (219.5ms)
+  Rendered videos/new.html.erb within layouts/application (221.9ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde9d058100>
+Did you mean?  @video):
+    1: <%= form_for(video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+  
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70296986109640'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70297046928260'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.0ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:18:35 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (172.4ms)
+  Rendered videos/new.html.erb within layouts/application (174.4ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde95da40a0>
+Did you mean?  @video):
+    1: <%= form_for(video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+  
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70297037052780'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70296986789220'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (128.8ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:20:18 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (213.7ms)
+  Rendered videos/new.html.erb within layouts/application (216.1ms)
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde967f3218>
+Did you mean?  @video):
+    1: <%= form_for(video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+  
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70296981269720'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70297034185980'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.0ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:21:12 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (175.2ms)
+  Rendered videos/new.html.erb within layouts/application (177.1ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde9bd97228>
+Did you mean?  @video):
+    1: <%= form_for(@video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+    5: 
+  
+app/views/videos/_form.html.erb:2:in `block in _app_views_videos__form_html_erb__90974456532491516_70296987936020'
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70296987936020'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70297037094440'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (114.5ms)
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:21:41 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2018-01-03 11:21:44 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (166.1ms)
+  Rendered videos/edit.html.erb within layouts/application (168.1ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde9d18f370>
+Did you mean?  @video):
+    1: <%= form_for(@video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+    5: 
+  
+app/views/videos/_form.html.erb:2:in `block in _app_views_videos__form_html_erb__90974456532491516_70296983222060'
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70296983222060'
+app/views/videos/edit.html.erb:5:in `_app_views_videos_edit_html_erb__903562344319452465_70297047563940'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (111.7ms)
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:24:33 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:24:37 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (184.1ms)
+  Rendered videos/new.html.erb within layouts/application (186.3ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde9bc060a8>
+Did you mean?  @video):
+    1: <%= form_for(@video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+    5: 
+  
+app/views/videos/_form.html.erb:2:in `block in _app_views_videos__form_html_erb__90974456532491516_70297048092860'
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70297048092860'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70297036272960'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.2ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:25:13 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (168.8ms)
+  Rendered videos/new.html.erb within layouts/application (171.0ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde95e9b0d0>
+Did you mean?  @video):
+    1: <%= form_for(@video) do |f| %>
+    2:   <% if video.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+    5: 
+  
+app/views/videos/_form.html.erb:2:in `block in _app_views_videos__form_html_erb__90974456532491516_70297013441380'
+app/views/videos/_form.html.erb:1:in `_app_views_videos__form_html_erb__90974456532491516_70297013441380'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70296987295140'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.1ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:31:10 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (195.3ms)
+  Rendered videos/new.html.erb within layouts/application (197.6ms)
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde95e71fc8>
+Did you mean?  @video):
+    1: attr_reader :video
+    2: <%= form_for(video) do |f| %>
+    3:   <% if video.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+  
+app/views/videos/_form.html.erb:2:in `_app_views_videos__form_html_erb__90974456532491516_70297036558340'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70296987210960'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.5ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:31:35 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (176.3ms)
+  Rendered videos/new.html.erb within layouts/application (178.9ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<#<Class:0x007fde972c85d0>:0x007fde9659d0b8>
+Did you mean?  @video):
+    1: 
+    2: <%= form_for(@video) do |f| %>
+    3:   <% if video.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+    6: 
+  
+app/views/videos/_form.html.erb:3:in `block in _app_views_videos__form_html_erb__90974456532491516_70296997874080'
+app/views/videos/_form.html.erb:2:in `_app_views_videos__form_html_erb__90974456532491516_70296997874080'
+app/views/videos/new.html.erb:5:in `_app_views_videos_new_html_erb__3508550451839451568_70296990986940'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.5ms)
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:31:51 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (9.8ms)
+  Rendered videos/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for 127.0.0.1 at 2018-01-03 11:32:04 +0000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for 127.0.0.1 at 2018-01-03 11:32:08 +0000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:32:15 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/2/edit" for 127.0.0.1 at 2018-01-03 11:32:18 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (1.7ms)
+  Rendered videos/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:33:26 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (1.9ms)
+  Rendered videos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:33:28 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/2/edit" for 127.0.0.1 at 2018-01-03 11:33:29 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (2.3ms)
+  Rendered videos/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:33:30 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-03 11:33:31 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:33:32 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:35:34 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (1.3ms)
+  Rendered videos/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 11:35:34 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (1.1ms)
+  Rendered videos/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:35:52 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2018-01-03 11:35:54 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (1.5ms)
+  Rendered videos/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 11:35:58 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
