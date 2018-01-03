@@ -331,3 +331,280 @@ Processing by PagesController#contact as HTML
 Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-03 10:38:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.6) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.6) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVideos (20180103103722)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "wistia" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180103103722"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-01-03 10:39:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.6/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 26ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:39:50 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 426ms (Views: 420.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 10:40:22 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (19.9ms)
+  Rendered videos/new.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 85ms (Views: 75.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/videos" for 127.0.0.1 at 2018-01-03 10:40:35 +0000
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XWonEHg5ceM4pe3gnXMfk1+/irsYVVJIlwAyjWkAcg1gc6Z5XIXo5jK5TB0azbSpSVNwzlgRNonjtlsZ7cv27w==", "video"=>{"wistia"=>"abc", "description"=>"a good one "}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("wistia", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["wistia", "abc"], ["description", "a good one "], ["created_at", "2018-01-03 10:40:35.826174"], ["updated_at", "2018-01-03 10:40:35.826174"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2018-01-03 10:40:35 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:40:41 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2018-01-03 10:40:43 +0000
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (4.2ms)
+  Rendered videos/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/videos" for 127.0.0.1 at 2018-01-03 10:40:54 +0000
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HrvgiDncPiXibjE0C6h9k4b8+o2+JFh83XDtLnad6owjomHhHWCnIOhykMmMFtapkBAA+P5gPL2pxoS68lZubg==", "video"=>{"wistia"=>"xyz", "description"=>"I love this"}, "commit"=>"Create Video"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("wistia", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["wistia", "xyz"], ["description", "I love this"], ["created_at", "2018-01-03 10:40:54.294867"], ["updated_at", "2018-01-03 10:40:54.294867"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/videos/2
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-03 10:40:54 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:40:57 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTitleToVideos (20180103105210)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "videos" ADD "title" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180103105210"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:54:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 275ms (Views: 260.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:54:41 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:55:22 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2018-01-03 10:55:32 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (20.9ms)
+  Rendered videos/edit.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2018-01-03 10:55:38 +0000
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iS7XNHJMwmSasZUgJwkIA2hZckCv5Ds5Rhq44SIEsc2x8iEyPobTVhgBWuoMlVP50pNW+Y9TYDLTy+jzAVuR6A==", "video"=>{"wistia"=>"abc", "title"=>"Title", "description"=>"a good one "}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "videos" SET "title" = ?, "updated_at" = ? WHERE "videos"."id" = ?[0m  [["title", "Title"], ["updated_at", "2018-01-03 10:55:38.749615"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2018-01-03 10:55:38 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:55:41 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:56:52 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:56:59 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2018-01-03 10:57:03 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (4.0ms)
+  Rendered videos/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2018-01-03 10:58:08 +0000
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/edit.html.erb within layouts/application
+  Rendered videos/_form.html.erb (3.1ms)
+  Rendered videos/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2018-01-03 10:59:42 +0000
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2018-01-03 10:59:46 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+
+
