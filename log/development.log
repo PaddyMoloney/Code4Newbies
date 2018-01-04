@@ -1744,3 +1744,108 @@ Processing by VideosController#show as HTML
 Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/videos/3" for 127.0.0.1 at 2018-01-04 11:28:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 269ms (Views: 244.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-04 11:28:36 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-04 11:30:34 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-04 11:31:04 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-04 11:31:44 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `next_video' for #<Video:0x007fd8c459dd88>):
+  
+app/controllers/videos_controller.rb:15:in `show'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.9ms)
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-04 11:32:34 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `fwhere' for #<Class:0x007fd8c3f76428>
+Did you mean?  where):
+  
+app/models/video.rb:3:in `next'
+app/controllers/videos_controller.rb:15:in `show'
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/patrickmoloney/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.3ms)
+Started GET "/videos/2" for 127.0.0.1 at 2018-01-04 11:32:57 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE (id > 2) ORDER BY "videos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE (id < 2) ORDER BY "videos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 29.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/videos/3" for 127.0.0.1 at 2018-01-04 11:33:03 +0000
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE (id > 3) ORDER BY "videos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE (id < 3) ORDER BY "videos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
